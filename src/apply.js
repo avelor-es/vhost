@@ -1,7 +1,7 @@
 import { writeFileSync, mkdirSync } from 'fs'
 import { resolve }                  from 'path'
 import { loadConfig }               from './config.js'
-import { staticVhost, proxyVhost, catchallVhost, errorsConf } from './templates.js'
+import { staticVhost, proxyVhost, catchallVhost, errorsConf, securityConf } from './templates.js'
 import { generateErrorPages, ERROR_CODES }                    from './error-pages.js'
 import {
   a2ensite, a2enconf, configtest, reload,
@@ -87,6 +87,15 @@ export function apply(args) {
       )
       a2enconf('vhost-errors')
     }, dim('vhost-errors.conf'))
+
+    step('security conf', () => {
+      writeFileSync(
+        resolve(CONF_AVAILABLE, 'vhost-security.conf'),
+        securityConf(),
+        'utf8'
+      )
+      a2enconf('vhost-security')
+    }, dim('vhost-security.conf'))
 
     console.log('')
   }

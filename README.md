@@ -2,6 +2,8 @@
 
 Apache virtual host manager. Define your sites in a YAML file, run one command, and Apache is configured.
 
+![demo](demo.gif)
+
 ```
 sudo vhost apply
 ```

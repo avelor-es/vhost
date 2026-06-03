@@ -31,6 +31,10 @@ export function check() {
     confEnabled('vhost-errors'),
     'not active — run: vhost apply')
 
+  issues += infra('vhost-security.conf',
+    confEnabled('vhost-security'),
+    'not active — run: vhost apply')
+
   issues += infra('error pages',
     existsSync(ERRORS_DIR),
     `${ERRORS_DIR} missing — run: vhost apply`,

@@ -1,6 +1,6 @@
 {
   "name": "@avelor/vhost",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Apache virtual host manager. Declarative sites, catch-all protection, and built-in error pages.",
   "keywords": [
     "apache",
