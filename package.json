@@ -1,0 +1,39 @@
+{
+  "name": "@avelor/vhost",
+  "version": "0.1.0",
+  "description": "Apache virtual host manager. Declarative sites, catch-all protection, and built-in error pages.",
+  "keywords": [
+    "apache",
+    "vhost",
+    "virtual-host",
+    "apache2",
+    "reverse-proxy",
+    "developer-tools"
+  ],
+  "license": "MIT",
+  "author": "Avelor <cruz@avelor.es>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avelor-es/vhost"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "bin": {
+    "vhost": "./bin/vhost.js"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

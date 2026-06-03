@@ -1,0 +1,20 @@
+sites:
+  avelor.com:
+    aliases: [www.avelor.com]
+    mode: static
+    root: /home/avelor/avelor
+
+  api.avelor.es:
+    mode: proxy
+    port: 3000
+
+  app.avelor.es:
+    mode: proxy
+    port: 4000
+
+  # internal.example.com:
+  #   mode: static
+  #   root: /var/www/internal
+  #   ssl:
+  #     cert: /etc/ssl/certs/internal.pem
+  #     key:  /etc/ssl/private/internal.key
